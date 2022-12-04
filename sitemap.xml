@@ -30,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://jiacheng-code.github.io/en/Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jiacheng-code.github.io/archive/index.html</loc>
     
     <lastmod>2017-03-20</lastmod>
@@ -66,20 +59,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://jiacheng-code.github.io/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2022-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://jiacheng-code.github.io/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2022-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
 </urlset>

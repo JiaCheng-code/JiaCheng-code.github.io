@@ -247,17 +247,6 @@
           
           
           <li>
-            <a href="/archive/">
-              
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -269,9 +258,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/archive/">
               
-              标签
+              归档
               
               
             </a>
@@ -283,6 +272,17 @@
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -404,11 +404,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              阅读时间 <span class="post-count">2</span> 分钟
+              阅读时间 <span class="post-count">3</span> 分钟
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              文章共 <span class="post-count">604</span> 字
+              文章共 <span class="post-count">808</span> 字
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -526,16 +526,19 @@
 <h3 id="添加一个用户git">添加一个用户git</h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">adduser git   #添加git用户</span><br><span class="line">chmod 740 /etc/sudoers  #改变sudoers文件的权限为文件所有者可写</span><br><span class="line">vim /etc/sudoers</span><br><span class="line"><span class="meta">#</span><span class="bash">在root ALL=(ALL) ALL 下方添加一行</span> </span><br><span class="line">git ALL=(ALL) ALL</span><br><span class="line">chmod 400 /etc/sudoers  #将其权限修改为文件所有者可读</span><br></pre></td></tr></table></figure>
 <h3 id="给git用户添加ssh密钥">给git用户添加ssh密钥</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在主机端打开powershell，<span class="built_in">cd</span>到C:\Users\admin\.ssh生成密匙，如已有密匙可跳过这一步</span></span><br><span class="line">ssh-keygen -t rsa -C &quot;taitres.cc&quot;</span><br><span class="line"><span class="meta">#</span><span class="bash"> -t 指定密钥类型，默认是 rsa ，可以省略</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -C 用于识别这个密钥的注释，可以输入任何内容</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -f 指定密钥文件存储文件名，默认id_rsa</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">在服务器端</span></span><br><span class="line">su git  #切换到git用户</span><br><span class="line">mkdir -p ~/.ssh</span><br><span class="line">touch ~/.ssh/authorized_keys #创建authorized_keys文件</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys  #为authorized_keys文件赋予文件所有者可读可写的权限</span><br><span class="line">chmod 700 ~/.ssh  #为.ssh文件夹赋予文件夹所有者可读可写可执行的权限</span><br></pre></td></tr></table></figure>
+<p>在www/wwwroot/目录下git clone项目</p>
+<p>创建php站点</p>
+<p><img src="image-20221204215313929.png" alt="image-20221204215313929"></p>
+<p>将根目录指向git clone下来的项目</p>
+<p>然后通过公网ip或者域名就可以访问了，效果如图：</p>
+<p><img src="image-20221204215506188.png" alt="image-20221204215506188"></p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          
-          <li class="next">
-            <a href="/en/Hexo-Theme-LiveMyLife/" data-toggle="tooltip" data-placement="top" title="Hexo-Theme-LiveMyLife">Next Post &rarr;</a>
-          </li>
           
         </ul>
 
